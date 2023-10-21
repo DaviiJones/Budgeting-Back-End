@@ -1,5 +1,5 @@
 const express = require("express");
-const transaction = require("./controllers/transactionController");
+const transaction = require("./controllers/allTransactions");
 
 const app = express();
 const cors = require("cors");
