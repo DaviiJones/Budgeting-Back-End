@@ -3,6 +3,7 @@ const transaction = require("./controllers/allTransactions");
 
 const app = express();
 const cors = require("cors");
+app.use(cors({ origin: "http://localhost:1313" }));
 
 app.use(express.json());
 app.use("/transaction", transaction);
@@ -11,7 +12,7 @@ app.use("/transaction", transaction);
 
 app.get("/", (req, res) => {
    
-    res.send(`Welcome to my Budgeting App`);
+    res.send(`Welcome to my Budgeting App!`);
 })
 
 app.get("*", (req, res) => {
