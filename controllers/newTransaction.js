@@ -18,7 +18,7 @@ transactions.post("/", (req, res) => {
     ) {
         transactionData.push(newTransaction);
         console.log(`transactionData.length - 1`)
-        //displaying the body created by the user 
+        
         res.status(200).json({ status: "Transaction Added", payload: transactionData[transactionData.length - 1] })
       }  else {
         res.status(400).json({error: "Bad Request: Invalid transaction data"});

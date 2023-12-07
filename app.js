@@ -1,14 +1,13 @@
 const express = require("express");
-const transaction = require("./controllers/allTransactions");
+const transactions = require("./controllers/allTransactions");
 
 const app = express();
 const cors = require("cors");
 app.use(cors({ origin: "http://localhost:1313" }));
 
 app.use(express.json());
-app.use("/transaction", transaction);
+app.use("/transactions", transactions);
 
-// const coolest = "Gen";
 
 app.get("/", (req, res) => {
    
